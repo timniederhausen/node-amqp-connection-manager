@@ -394,12 +394,82 @@ export default class ChannelWrapper extends EventEmitter {
         return null;
     }
 
-    // Send an `ack` to the underlying channel.
+    // Send a `assertQueue` to the underlying channel.
+    assertQueue() {
+        return this._channel && this._channel.assertQueue.apply(this._channel, arguments);
+    }
+
+    // Send a `checkQueue` to the underlying channel.
+    checkQueue() {
+        return this._channel && this._channel.checkQueue.apply(this._channel, arguments);
+    }
+
+    // Send a `deleteQueue` to the underlying channel.
+    deleteQueue() {
+        return this._channel && this._channel.deleteQueue.apply(this._channel, arguments);
+    }
+
+    // Send a `purgeQueue` to the underlying channel.
+    purgeQueue() {
+        return this._channel && this._channel.purgeQueue.apply(this._channel, arguments);
+    }
+
+    // Send a `bindQueue` to the underlying channel.
+    bindQueue() {
+        return this._channel && this._channel.bindQueue.apply(this._channel, arguments);
+    }
+
+    // Send a `unbindQueue` to the underlying channel.
+    unbindQueue() {
+        return this._channel && this._channel.unbindQueue.apply(this._channel, arguments);
+    }
+
+    // Send a `assertExchange` to the underlying channel.
+    assertExchange() {
+        return this._channel && this._channel.assertExchange.apply(this._channel, arguments);
+    }
+
+    // Send a `checkExchange` to the underlying channel.
+    checkExchange() {
+        return this._channel && this._channel.checkExchange.apply(this._channel, arguments);
+    }
+
+    // Send a `deleteExchange` to the underlying channel.
+    deleteExchange() {
+        return this._channel && this._channel.deleteExchange.apply(this._channel, arguments);
+    }
+
+    // Send a `bindExchange` to the underlying channel.
+    bindExchange() {
+        return this._channel && this._channel.bindExchange.apply(this._channel, arguments);
+    }
+
+    // Send a `unbindExchange` to the underlying channel.
+    unbindExchange() {
+        return this._channel && this._channel.unbindExchange.apply(this._channel, arguments);
+    }
+
+    // Send a `consume` to the underlying channel.
+    consume() {
+        return this._channel && this._channel.consume.apply(this._channel, arguments);
+    }
+
+    // Send a `cancel` to the underlying channel.
+    cancel() {
+        return this._channel && this._channel.cancel.apply(this._channel, arguments);
+    }
+
+    // Send a `get` to the underlying channel.
+    get() {
+        return this._channel && this._channel.get.apply(this._channel, arguments);
+    }
+
+    // Send a `ack` to the underlying channel.
     ack() {
         return this._channel && this._channel.ack.apply(this._channel, arguments);
     }
 
-    // Send an `ackAll` to the underlying channel.
+    // Send a `ackAll` to the underlying channel.
     ackAll() {
         return this._channel && this._channel.ackAll.apply(this._channel, arguments);
     }
@@ -414,28 +484,18 @@ export default class ChannelWrapper extends EventEmitter {
         return this._channel && this._channel.nackAll.apply(this._channel, arguments);
     }
 
-    // Send a `purgeQueue` to the underlying channel.
-    purgeQueue() {
-        return this._channel && this._channel.purgeQueue.apply(this._channel, arguments);
+    // Send a `reject` to the underlying channel.
+    reject() {
+        return this._channel && this._channel.reject.apply(this._channel, arguments);
     }
 
-    // Send a `checkQueue` to the underlying channel.
-    checkQueue() {
-        return this._channel && this._channel.checkQueue.apply(this._channel, arguments);
+    // Send a `prefetch` to the underlying channel.
+    prefetch() {
+        return this._channel && this._channel.prefetch.apply(this._channel, arguments);
     }
 
-    // Send a `assertQueue` to the underlying channel.
-    assertQueue() {
-        return this._channel && this._channel.assertQueue.apply(this._channel, arguments);
-    }
-
-    // Send a `bindQueue` to the underlying channel.
-    bindQueue() {
-        return this._channel && this._channel.bindQueue.apply(this._channel, arguments);
-    }
-
-    // Send a `assertExchange` to the underlying channel.
-    assertExchange() {
-        return this._channel && this._channel.assertExchange.apply(this._channel, arguments);
+    // Send a `recover` to the underlying channel.
+    recover() {
+        return this._channel && this._channel.recover.apply(this._channel, arguments);
     }
 }
