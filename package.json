@@ -3,6 +3,7 @@
   "version": "3.2.0",
   "description": "Auto-reconnect and round robin support for amqplib.",
   "main": "lib/index.js",
+  "types": "src/index.d.ts",
   "dependencies": {
     "promise-breaker": "^5.0.0"
   },
@@ -17,6 +18,7 @@
     "@jwalton/semantic-release-config": "^1.0.0",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^7.0.1",
+    "@types/amqplib": "^0.5.13",
     "amqplib": "^0.5.1",
     "babel-plugin-istanbul": "^5.1.1",
     "chai": "^4.1.2",
